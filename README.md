@@ -3,6 +3,7 @@
 ## IMPLEMENTACION LOGGER
 Ruta logger test
 '/loggerTest'
+
 ## Servidor Express con Node, Handlebars y persistencia de datos en MongoDB con login de usuario incorporado
 Este proyecto es una aplicación en Node.js que gestiona productos y carritos de compras. Permite agregar, actualizar, eliminar y consultar productos y carritos de compra. Además, utiliza Handlebars para renderizar las vistas tanto de la lista de productos y detalle del producto como el carrito con los productos agregados. Para poder acceder a las funcionalidades de ver y gestionar productos, debes pasar un login de usuario, registrarte primeramente y luego validar los datos al ingresar, el proceso de registro hace que el usuario se guarde en nuestra base de datos en MongoDb de manera codificada con la constraseña encriptada.
 
@@ -30,17 +31,8 @@ Ahora en esta nueva implementacion, agregamos la funcion de mostrar secciones de
     npm i jsonwebtoken
     npm i dotenv
     npm i chance
+    npm i chalk
     npm i uuid
-```
-# Crea un archivo en la raiz del proyecto llamado .env y agrega tus credenciales para acceder a la base de datos MongoDB siguiendo el esquema presentado debajo y modificando los siguientes segmentos "TU-NOMBRE-DE-USUARIO","TU-PASSWORD", "TU CONTRASEÑA" :
-
-
-
-```bash
-   MONGO_URI=mongodb+srv://"TU-NOMBRE-DE-USUARIO":"TU-PASSWORD"@cluster0.xtb0h9o.mongodb.net/dan?retryWrites=true&w=majority
-   
-   SESSION_SECRET="TU CONTRASEÑA"
-
 ```
 
 
@@ -142,10 +134,6 @@ La aplicación estará disponible en:
 - DELETE `/api/carts/:cid/products/:id`: Elimina un producto del carrito por su ID.
 
 
-### 2. Puedes utilizar las siguientes rutas para interactuar con la aplicación desde el navegador web:
-
-- `/cart/:cid`: Obtiene la lista renderizada de todos los productos dentro del carrito, por el id del carrito.
-- `/:id`: Obtiene el producto renderizado por su ID.
 
 - ### CHAT
 - `/chat`: Te muestra un formulario para enviar un mensaje junto a tu usuario a la base de datos de Mongo Atlas
